@@ -188,8 +188,8 @@ app.post('/send-email', (req: Request<{}, {}, EmailRequest>, res: Response) => {
         </div>
 
         <div class="order-summary">
-            <h2>Thank You for Choosing Skill GPT</h2>
-            <p>${message}</p>
+        <p class="font-bold text-xl">${message}</p>
+        <h4>Thank You for Choosing Skill GPT</h4>
         </div>
 
        
