@@ -64,8 +64,10 @@ app.post('/send-email', (req: Request<{}, {}, EmailRequest>, res: Response) => {
         }
 
         .header {
+            display:flex;
+            align-items:center;
             background-color: #1e1e1e;
-            padding: 20px;
+            padding: 10px;
             text-align: center;
             color: white;
         }
@@ -166,6 +168,7 @@ app.post('/send-email', (req: Request<{}, {}, EmailRequest>, res: Response) => {
             text-align: center;
             color: white;
         }
+    
 
         .footer a {
             color: white;
@@ -277,6 +280,9 @@ app.post('/support-mail', (req: Request<{}, {}, EmailRequest>, res: Response) =>
             max-height: 24px;
             vertical-align: middle;
         }
+        .font-bold{
+          font-weight:700;
+        }
 
         .badge {
             position: absolute;
@@ -337,14 +343,13 @@ app.post('/support-mail', (req: Request<{}, {}, EmailRequest>, res: Response) =>
 
     <!-- Body -->
     <div class="email-body">
-        <h4>Regarding:You have 4 expenses to approve!</h4>
-        <p>Hi Support Team,</p>
+        <p class="font-bold">Hi Support Team,</p>
         <p>${message}</p>
         <div>
         <h3>Here are my details:</h3>
-         <p>Name:${userName}</p>
-         <p>Email:${email}</p>
-         <p>Phone:${phone}</p>
+         <p class="font-bold">Name:${userName}</p>
+         <p class="font-bold">Email:&nbsp;${email}</p>
+         <p class="font-bold">Phone:${phone}</p>
         </div>
 
         
@@ -363,7 +368,6 @@ app.post('/support-mail', (req: Request<{}, {}, EmailRequest>, res: Response) =>
 
 </body>
 </html>
-
 
       `,                                            // HTML content for email
     };
